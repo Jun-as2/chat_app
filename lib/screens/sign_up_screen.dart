@@ -1,14 +1,13 @@
-import 'package:chat_app/screens/sign_up_screen.dart';
 import 'package:flutter/material.dart';
 
-class SignInScreen extends StatefulWidget {
-  const SignInScreen({super.key});
+class SignUpScreen extends StatefulWidget {
+  const SignUpScreen({super.key});
 
   @override
-  State<SignInScreen> createState() => _SignInScreenState();
+  State<SignUpScreen> createState() => _SignUpScreenState();
 }
 
-class _SignInScreenState extends State<SignInScreen> {
+class _SignUpScreenState extends State<SignUpScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,17 +20,17 @@ class _SignInScreenState extends State<SignInScreen> {
                 height: 150,
               ),
               const Text(
-                'Welcome',
+                'Sign Up',
                 style: TextStyle(
                     color: Colors.white,
-                    fontSize: 50,
+                    fontSize: 30,
                     fontWeight: FontWeight.w800),
               ),
               const SizedBox(
                 height: 10,
               ),
               const Text(
-                'Login to your account',
+                'Create your account',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 25,
@@ -65,10 +64,22 @@ class _SignInScreenState extends State<SignInScreen> {
               const SizedBox(
                 height: 15,
               ),
+              TextFormField(
+                keyboardType: TextInputType.visiblePassword,
+                decoration: InputDecoration(
+                  prefixIcon: const Icon(Icons.check_outlined),
+                  labelText: 'password check',
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10.0)),
+                ),
+              ),
+              const SizedBox(
+                height: 15,
+              ),
               ElevatedButton(
                 onPressed: () {},
                 child: Text(
-                  'Login',
+                  'Sign Up',
                   style: TextStyle(
                       color: Colors.black,
                       fontSize: 15,
@@ -81,34 +92,6 @@ class _SignInScreenState extends State<SignInScreen> {
                     borderRadius: BorderRadius.circular(20),
                   ),
                 ),
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    'Don\'t have an account?',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  TextButton(
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const SignUpScreen(),
-                          ));
-                    },
-                    child: Text(
-                      'Sign Up',
-                      style: TextStyle(
-                        color: Colors.indigo[200],
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
-                  ),
-                ],
               ),
             ],
           ),
