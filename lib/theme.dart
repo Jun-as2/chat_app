@@ -33,8 +33,6 @@ class AppTheme {
         visualDensity: visualDensity,
         textTheme:
             GoogleFonts.interTextTheme().apply(bodyColor: AppColors.textLigth),
-        // ignore: deprecated_member_use
-        backgroundColor: _DarkColors.background,
         appBarTheme: darkBase.appBarTheme.copyWith(
           backgroundColor: Colors.transparent,
           elevation: 0,
@@ -45,6 +43,7 @@ class AppTheme {
           ),
           systemOverlayStyle: SystemUiOverlayStyle.light,
         ),
+        primaryColor: _DarkColors.background,
         scaffoldBackgroundColor: _DarkColors.background,
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(foregroundColor: AppColors.secondary),
@@ -52,7 +51,7 @@ class AppTheme {
         cardColor: _DarkColors.card,
         primaryTextTheme: const TextTheme(
           // ignore: deprecated_member_use
-          headline6: TextStyle(color: AppColors.textLigth),
+          headlineLarge: TextStyle(color: AppColors.textLigth),
         ),
         iconTheme: const IconThemeData(color: AppColors.iconLight),
       );
