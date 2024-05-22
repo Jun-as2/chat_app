@@ -1,3 +1,4 @@
+import 'package:chat_app/screens/home_screen.dart';
 import 'package:chat_app/screens/sign_in_screen.dart';
 import 'package:chat_app/screens/sign_up_screen.dart';
 import 'package:chat_app/theme.dart';
@@ -18,7 +19,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: appTheme.dark,
-      home: const SignInScreen(),
+      home: SignInScreen(),
     );
   }
 }
